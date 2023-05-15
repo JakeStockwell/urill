@@ -15,6 +15,8 @@
     </head>
     <body class="antialiased">
         <x-head></x-head>
-        {{ $slot }}
+        <div class="container">
+            {{ $slot }}
+        </div>
     </body>
 </html>

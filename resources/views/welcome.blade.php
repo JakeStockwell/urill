@@ -6,3 +6,4 @@
         </article>
     @endforeach
 </x-layout_1>
+<x-menu :items="$items"></x-menu>

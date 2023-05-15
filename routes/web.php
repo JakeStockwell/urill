@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Client;
+use App\View\Components\Menu;
 use Illuminate\Support\Facades\Route;
 
 
@@ -17,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome', [
-        'clients' => Client::all()
+        'clients' => Client::all(),
+        'items' => Menu::getCategories()
     ]);
 });
 
@@ -30,7 +32,7 @@ Route::get('/clients', function () {
 
 Route::get('/clients/{id}', function ($id) {
 
-    $client = client::find($id);
+    $client = client::findOrFail($id);
 
     return view('clients', [
         'client' => $client
