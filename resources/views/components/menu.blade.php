@@ -1,11 +1,18 @@
 <div>
-    @foreach($items as $item)
+    @foreach($items as $k => $item)
         <ul>
-            @foreach($item as $item => $collection)
-                <li>
-                    <h4>{{ $collection }}</h4>
-                </li>
-            @endforeach
+        @if(!$item)
+            <li><a href="{{$k}}">{{$k}}</a></li>
+        @else
+            <li><a href="{{$k}}">{{$k}}</a></li>
+            <ul>
+                @foreach($item as $item => $collection)
+                    <li>
+                    <a href="{{$collection}}">{{$collection}}</a>
+                    </li>
+                @endforeach
+            </ul>
+        @endif
         </ul>
     @endforeach
 </div>

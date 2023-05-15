@@ -33,6 +33,6 @@ class Menu extends Component
     }
 
     public static function getCategories() {
-        return collect(Storage::json('public/categories.json'));
+        return collect(Storage::json('public/menu.json'));
     }
 }

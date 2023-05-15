@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome', [
         'clients' => Client::all(),
-        'items' => Menu::getCategories()
+        'menu_items' => Menu::getCategories()
     ]);
 });
 

@@ -14,8 +14,8 @@
         <link rel="stylesheet" type="text/css" href="/css/urill.css" />
     </head>
     <body class="antialiased">
-        <x-head></x-head>
         <div class="container">
+            <x-head></x-head>
             {{ $slot }}
         </div>
     </body>
